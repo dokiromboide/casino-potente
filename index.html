@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <!-- Web3.js para interacciones con blockchain -->
       <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+      
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
       <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      
       <!-- site metas -->
-      <title>cs</title>
+      <title>Casino Potente</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+      
       <!-- bootstrap css -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
@@ -26,47 +30,54 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
+      <!-- Estilos extra para la sección blockchain -->
+      <style>
+         #blockchain-section {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+         }
+         #blockchain-section h2 {
+            margin-bottom: 30px;
+         }
+         #blockchain-section label {
+            font-weight: bold;
+         }
+         #blockchain-section .form-control {
+            margin-bottom: 15px;
+         }
+      </style>
    </head>
-   <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/cargadefinitiva.gif" alt="#" /></div>
+         <div class="loader">
+            <img src="images/cargadefinitiva.gif" alt="#" />
+         </div>
       </div>
       <div class="wrapper">
-         <!-- end loader -->
+         <!-- Sidebar -->
          <div class="sidebar">
-            <!-- Sidebar  -->
             <nav id="sidebar">
                <div id="dismiss">
                   <i class="fa fa-arrow-left"></i>
                </div>
                <ul class="list-unstyled components">
-                  <li class="active">
-                     <a href="index.html">Inicio</a>
-                  </li>
-                  <li>
-                     <a href="#about">acerca de nosotros</a>
-                  </li>
-                  <li>
-                     <a href="#game">juegos</a>
-                  </li>
-                  <li>
-                     <a href="#customer">nuestros clientes</a>
-                  </li>
-                  <li>
-                     <a href="#contact">Contacto</a>
-                  </li>
+                  <li class="active"><a href="index.html">Inicio</a></li>
+                  <li><a href="#about">Acerca de Nosotros</a></li>
+                  <li><a href="#game">Juegos</a></li>
+                  <li><a href="#customer">Nuestros Clientes</a></li>
+                  <li><a href="#contact">Contacto</a></li>
                </ul>
             </nav>
          </div>
+         
+         <!-- Contenido principal -->
          <div id="content">
-            <!-- header -->
+            <!-- Header -->
             <header>
-               <!-- header inner -->
                <div class="head_top">
                   <div class="header">
                      <div class="container-fluid">
@@ -83,12 +94,10 @@
                            <div class="col-md-9">
                               <div class="right_header_info">
                                  <ul>
-                                    <li class="menu_iconb">
-                                       <a href="Javascript:void(0)">Inicia Sesion</a>
-                                    </li>
+                                    <li class="menu_iconb"><a href="Javascript:void(0)">Inicia Sesion</a></li>
                                     <li>
                                        <button type="button" id="sidebarCollapse">
-                                       <img src="images/menu_icon.png" alt="#" />
+                                          <img src="images/menu_icon.png" alt="#" />
                                        </button>
                                     </li>
                                  </ul>
@@ -99,8 +108,9 @@
                   </div>
                </div>
             </header>
-            <!-- end header inner -->
-            <!-- end header -->
+            <!-- Fin Header -->
+            
+            <!-- Slider Section -->
             <section class="slider_section">
                <div class="banner_main">
                   <img src="images/casii no.jpg" alt="#"/>
@@ -115,72 +125,73 @@
                   </div>
                </div>
             </section>
-         <!-- Categories -->
-         <!-- casino -->
-         <div id="game" class="casino">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="titlepage">
-                        <h2>duplica tus sueños y apuestas</h2>
-                        <span></span>
+            
+            <!-- Casino Section (Juegos) -->
+            <div id="game" class="casino">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="titlepage">
+                           <h2>Duplica tus sueños y apuestas</h2>
+                           <span></span>
+                        </div>
                      </div>
                   </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-4 padding_bottom">
-                     <div class="game_box">
-                        <figure><img src="images/game1.jpg" alt="#"/></figure>
+                  <div class="row">
+                     <!-- Aquí se listan los juegos (6 ejemplos) -->
+                     <div class="col-md-4 padding_bottom">
+                        <div class="game_box">
+                           <figure><img src="images/game1.jpg" alt="#"/></figure>
+                        </div>
+                        <div class="game">
+                           <h3>Juego 1</h3>
+                        </div>
                      </div>
-                     <div class="game">
-                        <h3>Juego 1</h3>
+                     <div class="col-md-4 padding_bottom">
+                        <div class="game_box">
+                           <figure><img src="images/game2.jpg" alt="#"/></figure>
+                        </div>
+                        <div class="game">
+                           <h3>Juego 2</h3>
+                        </div>
                      </div>
-                  </div>
-                  <div class="col-md-4 padding_bottom">
-                     <div class="game_box">
-                        <figure><img src="images/game2.jpg" alt="#"/></figure>
+                     <div class="col-md-4 padding_bottom">
+                        <div class="game_box">
+                           <figure><img src="images/game3.jpg" alt="#"/></figure>
+                        </div>
+                        <div class="game">
+                           <h3>Juego 3</h3>
+                        </div>
                      </div>
-                     <div class="game">
-                        <h3>Juego 2</h3>
+                     <div class="col-md-4 margin_bottom1">
+                        <div class="game_box">
+                           <figure><img src="images/game4.jpg" alt="#"/></figure>
+                        </div>
+                        <div class="game">
+                           <h3>Juego 4</h3>
+                        </div>
                      </div>
-                  </div>
-                  <div class="col-md-4 padding_bottom">
-                     <div class="game_box">
-                        <figure><img src="images/game3.jpg" alt="#"/></figure>
+                     <div class="col-md-4 margin_bottom1">
+                        <div class="game_box">
+                           <figure><img src="images/game5.jpg" alt="#"/></figure>
+                        </div>
+                        <div class="game">
+                           <h3>Juego 5</h3>
+                        </div>
                      </div>
-                     <div class="game">
-                        <h3>Juego 3</h3>
-                     </div>
-                  </div>
-                  <div class="col-md-4 margin_bottom1">
-                     <div class="game_box">
-                        <figure><img src="images/game4.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="game">
-                        <h3>Juego 4</h3>
-                     </div>
-                  </div>
-                  <div class="col-md-4 margin_bottom1">
-                     <div class="game_box">
-                        <figure><img src="images/game5.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="game">
-                        <h3>Juego 5</h3>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="game_box">
-                        <figure><img src="images/game6.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="game">
-                        <h3>Juego 6</h3>
+                     <div class="col-md-4">
+                        <div class="game_box">
+                           <figure><img src="images/game6.jpg" alt="#"/></figure>
+                        </div>
+                        <div class="game">
+                           <h3>Juego 6</h3>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
-         <!-- end casino -->
-         <!-- licens -->
+            
+                     <!-- licens -->
          <div class="licens">
             <div class="container">
                <div class="row">
@@ -358,170 +369,171 @@
             </div>
          </div>
          <!-- Fin Licens -->
-         <!-- Customer -->
-         <div id="customer" class="customer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="titlepage">
-                        <h2>que dicen nuestros clientes</h2>
-                        <span></span>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-10 offset-md-1">
-                     <div class="customer_text">
-                        <p>un negro que además de quitarte a tu mujer, va a quitarte tu dinero.</p>
-                        <div class="customer_box">
-                           <i><img src="images/bender1.png" alt="#"/></i>
-                           <h4>Bender Bending Rodríguez</h4>
-                           <span>ludopata empedernido</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- Sección de Interacción con Blockchain -->
-         <section id="blockchain-section" style="padding: 40px 0; background: #f9f9f9;">
-            <div class="container">
-               <h2 class="text-center">Interacción con Blockchain</h2>
-               <div class="row">
-                  <!-- Emisión de ficha -->
-                  <div class="col-md-6">
-                     <div id="emit-section">
-                        <h3>Emitir Ficha Gratuita</h3>
-                        <label for="recipientAddress">Dirección del usuario:</label>
-                        <input type="text" id="recipientAddress" class="form-control" placeholder="0x..." />
-                        <br />
-                        <label for="ipDetails">Detalle (IP, ubicación, etc):</label>
-                        <input type="text" id="ipDetails" class="form-control" placeholder="Ej: 192.168.0.1" />
-                        <br />
-                        <button id="emitChipBtn" class="btn btn-primary">Emitir Ficha</button>
-                     </div>
-                  </div>
-                  <!-- Uso de ficha -->
-                  <div class="col-md-6">
-                     <div id="use-section">
-                        <h3>Usar Ficha</h3>
-                        <label for="chipId">ID de ficha:</label>
-                        <input type="number" id="chipId" class="form-control" placeholder="ID de la ficha" />
-                        <br />
-                        <button id="useChipBtn" class="btn btn-success">Usar Ficha</button>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- Fin Sección Blockchain -->
-         <!-- Reqeste -->
-         <div id="contact" class="reqeste">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="titlepage">
-                        <h2>solicita una llamada (nunca contestamos)</h2>
-                        <span></span>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-6 offset-md-3">
-                     <form id="cochang" class="form_main">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Nombre" type="text" name="Nombre">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="numero telefonico" type="text" name="numero telefonico">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Correo" type="text" name="Correo">
-                           </div>
-                           <div class="col-md-12">
-                              <input class="form_control" placeholder="Mensaje" type="text" name="Mensaje">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">enviar</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end reqeste -->
-         <!-- Footer -->
-         <footer>
-            <div class="footer">
+            
+            <!-- Customer Section -->
+            <div id="customer" class="customer">
                <div class="container">
                   <div class="row">
-                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
-                        <div class="address">
-                           <h3>Suscribete Ahora</h3>
-                           <form class="newtetter">
-                              <button class="submit">entregar</button>
-                              <input class="tetter" placeholder="Pon tu correo zunga" type="text" name="Pon tu correo zunga">
-                           </form>
-                        </div>
-                     </div>
-                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="row">
-                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                              <div class="address">
-                                 <h3>Links</h3>
-                                 <ul class="Menu_footer">
-                                    <li class="active"> <a href="index.html">Inicio</a> </li>
-                                    <li><a href="#about">Acerca</a> </li>
-                                    <li><a href="#game">Juegos</a> </li>
-                                    <li><a href="#customer">Cliente</a> </li>
-                                    <li><a href="#conatct">Contacto</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                              <div class="address">
-                                 <h3>Contactanos</h3>
-                                 <ul class="Links_footer">
-                                    <li>jajajaperdistetudinero@gmail.com</li>
-                                 </ul>
-                              </div>
-                           </div>
+                     <div class="col-md-12">
+                        <div class="titlepage">
+                           <h2>Qué dicen nuestros clientes</h2>
+                           <span></span>
                         </div>
                      </div>
                   </div>
-               </div>
-               <div class="copyright">
-                  <div class="container">
-                     <p>Copyright todos los derechos reservados a <a href="https://html.design/">Absolutamente nadie cabron</a></p>
+                  <div class="row">
+                     <div class="col-md-10 offset-md-1">
+                        <div class="customer_text">
+                           <p>Un negro que además de quitarte a tu mujer, va a quitarte tu dinero.</p>
+                           <div class="customer_box">
+                              <i><img src="images/bender1.png" alt="#"/></i>
+                              <h4>Bender Bending Rodríguez</h4>
+                              <span>Ludópata Empedernido</span>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-         </footer>
-         <!-- end footer -->
+            
+            <!-- Sección de Interacción con Blockchain -->
+            <section id="blockchain-section">
+               <div class="container">
+                  <h2 class="text-center">Interacción con Blockchain</h2>
+                  <div class="row">
+                     <!-- Sección para emitir ficha -->
+                     <div class="col-md-6">
+                        <div id="emit-section">
+                           <h3>Emitir Ficha Gratuita</h3>
+                           <label for="recipientAddress">Dirección del usuario:</label>
+                           <input type="text" id="recipientAddress" class="form-control" placeholder="0x..." />
+                           <label for="ipDetails">Detalle (IP, ubicación, etc):</label>
+                           <input type="text" id="ipDetails" class="form-control" placeholder="Ej: 192.168.0.1" />
+                           <button id="emitChipBtn" class="btn btn-primary">Emitir Ficha</button>
+                        </div>
+                     </div>
+                     <!-- Sección para usar ficha -->
+                     <div class="col-md-6">
+                        <div id="use-section">
+                           <h3>Usar Ficha</h3>
+                           <label for="chipId">ID de ficha:</label>
+                           <input type="number" id="chipId" class="form-control" placeholder="ID de la ficha" />
+                           <button id="useChipBtn" class="btn btn-success">Usar Ficha</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            
+            <!-- Reqeste Section (Contacto) -->
+            <div id="contact" class="reqeste">
+               <div class="container">
+                  <!-- Aquí va el formulario de contacto existente -->
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="titlepage">
+                           <h2>Solicita una llamada (nunca contestamos)</h2>
+                           <span></span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6 offset-md-3">
+                        <form id="cochang" class="form_main">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <input class="form_control" placeholder="Nombre" type="text" name="Nombre">
+                              </div>
+                              <div class="col-md-12">
+                                 <input class="form_control" placeholder="Número telefónico" type="text" name="numero telefonico">
+                              </div>
+                              <div class="col-md-12">
+                                 <input class="form_control" placeholder="Correo" type="text" name="Correo">
+                              </div>
+                              <div class="col-md-12">
+                                 <input class="form_control" placeholder="Mensaje" type="text" name="Mensaje">
+                              </div>
+                              <div class="col-md-12">
+                                 <button class="send_btn">Enviar</button>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+            <!-- Footer Section -->
+            <footer>
+               <div class="footer">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="address">
+                              <h3>Suscríbete Ahora</h3>
+                              <form class="newtetter">
+                                 <button class="submit">Entregar</button>
+                                 <input class="tetter" placeholder="Pon tu correo zunga" type="text" name="Pon tu correo zunga">
+                              </form>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="row">
+                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                 <div class="address">
+                                    <h3>Links</h3>
+                                    <ul class="Menu_footer">
+                                       <li class="active"><a href="index.html">Inicio</a></li>
+                                       <li><a href="#about">Acerca</a></li>
+                                       <li><a href="#game">Juegos</a></li>
+                                       <li><a href="#customer">Clientes</a></li>
+                                       <li><a href="#contact">Contacto</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                 <div class="address">
+                                    <h3>Contáctanos</h3>
+                                    <ul class="Links_footer">
+                                       <li>jajajaperdistetudinero@gmail.com</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="copyright">
+                     <div class="container">
+                        <p>Copyright todos los derechos reservados a 
+                           <a href="https://html.design/">Absolutamente nadie cabrón</a>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+         </div>
+         <div class="overlay"></div>
       </div>
-      <div class="overlay"></div>
-      <!-- Javascript files-->
+      
+      <!-- Javascript files -->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
-      <!-- sidebar -->
+      <!-- Sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
       <script src="js/custom.js"></script>
+      
+      <!-- Inicialización de plugins (sidebar, fancybox, etc.) -->
       <script type="text/javascript">
          $(document).ready(function() {
-             $("#sidebar").mCustomScrollbar({
-                 theme: "minimal"
-             });
-         
+             $("#sidebar").mCustomScrollbar({ theme: "minimal" });
              $('#dismiss, .overlay').on('click', function() {
                  $('#sidebar').removeClass('active');
                  $('.overlay').removeClass('active');
              });
-         
              $('#sidebarCollapse').on('click', function() {
                  $('#sidebar').addClass('active');
                  $('.overlay').addClass('active');
@@ -536,7 +548,6 @@
                  openEffect: "none",
                  closeEffect: "none"
              });
-         
              $(".zoom").hover(function() {
                  $(this).addClass('transition');
              }, function() {
@@ -544,7 +555,8 @@
              });
          });
       </script>
-      <!-- Agregamos nuestro script de blockchain -->
+      
+      <!-- Script de blockchain -->
       <script src="blockchain.js"></script>
    </body>
 </html>
