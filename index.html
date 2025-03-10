@@ -357,9 +357,9 @@
                </div>
             </div>
          </div>
-         <!-- end lLicens -->
-         <!-- customer -->
-         <div id="customer"  class="customer">
+         <!-- Fin Licens -->
+         <!-- Customer -->
+         <div id="customer" class="customer">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
@@ -383,8 +383,39 @@
                </div>
             </div>
          </div>
-         <!-- end customer -->
-         <!-- reqeste -->
+         <!-- Sección de Interacción con Blockchain -->
+         <section id="blockchain-section" style="padding: 40px 0; background: #f9f9f9;">
+            <div class="container">
+               <h2 class="text-center">Interacción con Blockchain</h2>
+               <div class="row">
+                  <!-- Emisión de ficha -->
+                  <div class="col-md-6">
+                     <div id="emit-section">
+                        <h3>Emitir Ficha Gratuita</h3>
+                        <label for="recipientAddress">Dirección del usuario:</label>
+                        <input type="text" id="recipientAddress" class="form-control" placeholder="0x..." />
+                        <br />
+                        <label for="ipDetails">Detalle (IP, ubicación, etc):</label>
+                        <input type="text" id="ipDetails" class="form-control" placeholder="Ej: 192.168.0.1" />
+                        <br />
+                        <button id="emitChipBtn" class="btn btn-primary">Emitir Ficha</button>
+                     </div>
+                  </div>
+                  <!-- Uso de ficha -->
+                  <div class="col-md-6">
+                     <div id="use-section">
+                        <h3>Usar Ficha</h3>
+                        <label for="chipId">ID de ficha:</label>
+                        <input type="number" id="chipId" class="form-control" placeholder="ID de la ficha" />
+                        <br />
+                        <button id="useChipBtn" class="btn btn-success">Usar Ficha</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Fin Sección Blockchain -->
+         <!-- Reqeste -->
          <div id="contact" class="reqeste">
             <div class="container">
                <div class="row">
@@ -421,7 +452,7 @@
             </div>
          </div>
          <!-- end reqeste -->
-         <!--  footer -->
+         <!-- Footer -->
          <footer>
             <div class="footer">
                <div class="container">
@@ -478,8 +509,8 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-       <script src="js/custom.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="js/custom.js"></script>
       <script type="text/javascript">
          $(document).ready(function() {
              $("#sidebar").mCustomScrollbar({
@@ -507,15 +538,13 @@
              });
          
              $(".zoom").hover(function() {
-         
                  $(this).addClass('transition');
              }, function() {
-         
                  $(this).removeClass('transition');
              });
          });
       </script>
-     
+      <!-- Agregamos nuestro script de blockchain -->
+      <script src="blockchain.js"></script>
    </body>
 </html>
-
